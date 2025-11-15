@@ -35,7 +35,7 @@ export const Header = () => {
   
   const handleLogout = () => {
     localStorage.removeItem("userRole");
-    navigate("/");
+    navigate("/roles");
   };
 
   return (
@@ -74,9 +74,7 @@ export const Header = () => {
           <DropdownMenuContent align="end" className="w-48">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Profile</DropdownMenuItem>
             <DropdownMenuItem onClick={handleSwitchRole}>Switch Role</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="text-destructive" onClick={handleLogout}>
               Logout
